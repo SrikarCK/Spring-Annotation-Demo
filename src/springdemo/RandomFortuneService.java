@@ -8,8 +8,8 @@ import java.util.Random;
 public class RandomFortuneService implements FortuneService {
 
     private String[] fortune = {"Make your Day Bright",
-            "Work Hard and keep upto the mark",
-            "Just Do It: Yes you can and will."};
+                                "Work Hard and keep upto the mark",
+                                "Just Do It: Yes you can and will."};
 
     private Random myRandom = new Random();
     @Override

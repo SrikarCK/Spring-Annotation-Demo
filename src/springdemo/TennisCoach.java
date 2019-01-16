@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 //This will create a default bean-id with similar to class name as "tennisCoach"
 @Component
 //Creating the Custom or Explicit bean-id
@@ -18,6 +21,21 @@ public class TennisCoach implements Coach {
     @Autowired
     @Qualifier("randomFortuneService")
     private FortuneService fortuneService;
+
+    //Define init method
+    @PostConstruct
+    public void doMyStartupStuff(){
+        System.out.println("from method doMyStartupStuff() method.");
+    }
+    //Define destroy method
+
+    @PreDestroy
+    public void cleanupMyStuff(){
+        System.out.println("From method cleanupMyStuff() method.");
+    }
+
+
+
 
     //Autowired with constructor injection example.
 //    @Autowired
