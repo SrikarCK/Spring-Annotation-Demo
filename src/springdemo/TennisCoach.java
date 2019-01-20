@@ -34,9 +34,6 @@ public class TennisCoach implements Coach {
         System.out.println("From method cleanupMyStuff() method.");
     }
 
-
-
-
     //Autowired with constructor injection example.
 //    @Autowired
 //    public TennisCoach(FortuneService theFortuneService){
